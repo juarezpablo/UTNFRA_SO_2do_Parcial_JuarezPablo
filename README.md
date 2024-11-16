@@ -1,0 +1,2 @@
+# UTNFRA_SO_2do_Parcial_JuarezPablo
+2doParcial de Arquitectura
