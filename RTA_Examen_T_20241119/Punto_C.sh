@@ -20,12 +20,8 @@ sudo vim dockerfile
 FROM nginx
 COPY html /usr/share/nginx/html
 
-#logueo a docker con mi usuario y contrasena
-
-docker login -u juarezpablo
-
-#pass
-dckr_pat_EFMRhGiJpgAIN1wy3jjwb_XTj_w
+#logueo a docker con mi usuario y contrasena creada en el hub de docker
+(Aclaracion: No se puede agregar en este archivo los token de docker,ya que github no lo permite por una regla de seguridad)
 
 #creo mi propia imagen
 docker build -t juarezpablo/web1-juarezpablo:latest .
