@@ -26,6 +26,11 @@ COPY html /usr/share/nginx/html
 #creo mi propia imagen
 docker build -t juarezpablo/web1-juarezpablo:latest .
 
+#Puedo encontrar que el espacio asignado a lv_docker es insuficiente para crear la imagen
+#En ese caso extender el volumen logico de la sig manera
+sudo lvextend -L +400M /dev/mapper/vg_datos-lv_docker
+sudo resize2fs /dev/mapper/vg_datos-lv_docker
+
 #compruebo que la imagen este creada
 docker image list
 #subo la imagen a docker

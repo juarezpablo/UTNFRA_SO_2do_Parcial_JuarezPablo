@@ -15,9 +15,8 @@ cat $lista
 
 
 
+#Recorro el archivo txt con un for, en cada iteracion obtengo un usuario con su grupo correspondiente y directorio home
 
-#ANT_IFS=$IFS
-#IFS=$'\n'
 for LINEA in `cat $lista |  grep -v ^#`
 do
         nombre_usuario=$(echo  $LINEA |awk -F ',' '{print $1}')
@@ -25,6 +24,10 @@ do
         directorio_home=$(echo  $LINEA |awk -F ',' '{print $3}')
         echo "salida: user: $nombre_usuario  grupo: $grupo_primario directorio: $directorio_home"
 done
-#IFS=$ANT_IFS
+
+#Como estoy dentro de un for, primero creo el grupo, luego el usuario con su directorio obtenido de la lista y con la misma password obtenida del user pasado por parametro
+
+	sudo groupadd $grupo_primario
+        sudo useradd -m -d $directorio_home -s /bin/bash -c "" -p "$(sudo grep $usuario_master_clave /etc/shadow | awk-F ':' '{print $2}')" $nombre_usuario -G $grupo_primario $nombre_usuario
 
 

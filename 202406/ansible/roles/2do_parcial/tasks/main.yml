@@ -4,3 +4,18 @@
 - debug:
     msg: "Tareas del 2do Parcial"
 
+
+
+---
+- debug: Crear directorio con mkdir
+  ansible.builtin.command:
+    cmd: mkdir -p /temp/2do_parcial/{alumno,equipo}
+
+
+
+---
+
+
+
+
+
