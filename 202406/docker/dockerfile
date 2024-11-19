@@ -1,5 +1,3 @@
 FROM nginx
-COPY htmml /usr/share/nginx/html
-
-EXPOSE 80
+COPY htmml /usr/share/nginx/html/
 

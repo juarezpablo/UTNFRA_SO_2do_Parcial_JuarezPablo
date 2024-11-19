@@ -9,3 +9,8 @@
       debug:
         msg: "Despues de la ejecucion del rol"
 
+    - name: "Import nuevo_role"
+      import_role:
+        name: nuevo_role
+      tags:
+        - nuevo_role

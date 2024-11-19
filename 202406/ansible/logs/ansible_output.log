@@ -107,3 +107,53 @@ The offending line appears to be:
 2024-11-18 14:51:33,286 p=22859 u=root n=ansible | PLAY RECAP **********************************************************************************************************************************************************
 2024-11-18 14:51:33,287 p=22859 u=root n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
 2024-11-18 14:51:33,287 p=22859 u=root n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-19 01:08:52,947 p=24469 u=juarezpablo n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-19 01:08:53,102 p=24469 u=juarezpablo n=ansible | PLAY [all] *********************************************************************************************************************************************************************
+2024-11-19 01:08:53,113 p=24469 u=juarezpablo n=ansible | TASK [Gathering Facts] *********************************************************************************************************************************************************
+2024-11-19 01:08:53,234 p=24469 u=juarezpablo n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\njuarezpablo@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-19 01:08:54,319 p=24469 u=juarezpablo n=ansible | ok: [localhost]
+2024-11-19 01:08:54,337 p=24469 u=juarezpablo n=ansible | TASK [include_role : 2do_parcial] **********************************************************************************************************************************************
+2024-11-19 01:08:54,363 p=24469 u=juarezpablo n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  but found another document
+
+The error appears to be in '/home/juarezpablo/repogit/UTNFRA_SO_2do_Parcial_JuarezPablo/202406/ansible/roles/2do_parcial/tasks/main.yml': line 9, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+---
+^ here
+
+2024-11-19 01:08:54,364 p=24469 u=juarezpablo n=ansible | PLAY RECAP *********************************************************************************************************************************************************************
+2024-11-19 01:08:54,365 p=24469 u=juarezpablo n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-19 01:08:54,365 p=24469 u=juarezpablo n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-19 01:09:27,871 p=24585 u=root n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-19 01:09:28,030 p=24585 u=root n=ansible | PLAY [all] *********************************************************************************************************************************************************************
+2024-11-19 01:09:28,041 p=24585 u=root n=ansible | TASK [Gathering Facts] *********************************************************************************************************************************************************
+2024-11-19 01:09:28,206 p=24585 u=root n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nroot@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-19 01:09:29,449 p=24585 u=root n=ansible | ok: [localhost]
+2024-11-19 01:09:29,468 p=24585 u=root n=ansible | TASK [include_role : 2do_parcial] **********************************************************************************************************************************************
+2024-11-19 01:09:29,496 p=24585 u=root n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  but found another document
+
+The error appears to be in '/home/juarezpablo/repogit/UTNFRA_SO_2do_Parcial_JuarezPablo/202406/ansible/roles/2do_parcial/tasks/main.yml': line 9, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+---
+^ here
+
+2024-11-19 01:09:29,497 p=24585 u=root n=ansible | PLAY RECAP *********************************************************************************************************************************************************************
+2024-11-19 01:09:29,497 p=24585 u=root n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-19 01:09:29,497 p=24585 u=root n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

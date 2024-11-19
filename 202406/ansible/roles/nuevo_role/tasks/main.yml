@@ -1,0 +1,10 @@
+---
+# tasks file for nuevo_role
+#
+#
+
+- name: Crear directorio con mkdir
+  ansible.builtin.command:
+    cmd: mkdir -p mkdir -p /temp/2do_parcial/{alumno,equipo}
+
+
