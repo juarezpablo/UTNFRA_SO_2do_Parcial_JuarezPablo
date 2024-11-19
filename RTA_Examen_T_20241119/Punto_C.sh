@@ -35,3 +35,26 @@ sudo resize2fs /dev/mapper/vg_datos-lv_docker
 docker image list
 #subo la imagen a docker
 docker push juarezpablo/web1-juarezpablo
+
+
+
+
+#creo y edito el archivo run.sh que se utiliza para correr la imagen.
+sudo vim run.sh
+
+#pego el sig comando que se encarga de ejecutar la imagen y asignarle el puerto 8080
+
+
+#!/bin/bash
+docker run -d -p 8080:80 juarezpablo/web1-juarezpablo
+
+#puedo visualizarla con curl
+curl localhost:8080
+
+
+
+
+
+
+
+
